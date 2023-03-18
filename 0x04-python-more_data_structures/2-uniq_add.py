@@ -8,4 +8,7 @@ def uniq_add(my_list=[]):
         my_list - list 
         """
     result = set(my_list)
-    return sum(result)
+    rest = 0
+    for item in result:
+        rest += item
+    return rest

@@ -8,5 +8,5 @@ def square_matrix_simple(matrix=[]):
         the matrix
         """
     if not matrix:
-                print()
+        print()
     return [[i**2 for i in row] for row in matrix]
