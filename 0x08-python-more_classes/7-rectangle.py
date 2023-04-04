@@ -7,9 +7,9 @@ This module contains a class that defines a rectangle.
 class Rectangle():
     """Defines a rectangle."""
 
-    print_symbol = '#'
     number_of_instances = 0
-    
+    print_symbol = '#'
+
     def __init__(self, width=0, height=0):
         """Sets the necessary attributes for the Rectangle object.
         Args:
@@ -18,7 +18,7 @@ class Rectangle():
         """
         self.width = width
         self.height = height
-        self.number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     def __str__(self):
         """Sets the print behavior of the Rectangle object."""
@@ -33,11 +33,6 @@ class Rectangle():
     def __repr__(self):
         """Sets the repr behavior of the Rectangle object."""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
-
-    def __del__(self):
-        """ Sets the del behavior of the rectangle object"""
-        self.number_of_instances -= 1
-        print("Bye rectangle...")
 
     @property
     def width(self):
@@ -75,6 +70,11 @@ class Rectangle():
 
     def perimeter(self):
         """Returns the current rectangle perimeter."""
-        if self.__width == 0 or self.__height == 0:
+        if self.__width is 0 or self.__height is 0:
             return 0
         return self.__width * 2 + self.__height * 2
+
+    def __del__(self):
+        """Sets the del behavior of the Rectangle object."""
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
