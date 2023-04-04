@@ -19,6 +19,16 @@ class Rectangle():
         self.width = width
         self.height = height
 
+    def __str__(self):
+        """Sets the print behavior of the Rectangle Object."""
+        retangle = ""
+
+        if self.__width > 0 and self.__height > 0:
+            for x in range(self.__height):
+                retangle += '#' * self.__width + '\n'
+
+        return retangle[:-1]
+
     @property
     def width(self):
         """Get or set the width of the rectangle. """
