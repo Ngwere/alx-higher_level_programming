@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""Module for is_same_class()"""
+"""Module for is_same_class
+
+Contains the function that compaures object with class.
+"""
+
 
 def is_same_class(obj, a_class):
     """
