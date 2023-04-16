@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """the append_write module with the append_write() function"""
 
+
 import json
 
 
