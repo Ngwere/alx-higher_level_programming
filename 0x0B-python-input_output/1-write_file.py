@@ -1,6 +1,13 @@
 #!/usr/bin/python3
 
 
-def number_of_lines(filename=""):
-    with open(filename, "r", encoding="UTF-8") as f:
-        return len(list(f))
+def write_file(filename="", text=""):
+    """
+    the write file function
+
+    Args:
+        filename (str) - the file name to be read
+        text (str) - the lines to be read to file
+    """
+    with open(filename, "w", encoding="UTF-8") as f:
+        return f.write(text)

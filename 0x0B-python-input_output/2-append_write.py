@@ -2,9 +2,13 @@
 """read_line module with read_line() function"""
 
 
-def read_lines(filename="", nb_lines=0):
-    with open(filename, "r", encoding="UTF-8") as f:
-        if nb_lines <= 0:
-            print(f.read(), end="")
-        for index in range(nb_lines):
-            print(f.readline(), end="")
+def write_file(filename="", text=""):
+    """
+    read lines and return the number of characters
+
+    Args:
+        filename (str) - the filename of the file to be read
+        text (str) - the number of lines to be read
+    """
+    with open(filename, "w", encoding="UTF-8") as f:
+        return f.write(text)
