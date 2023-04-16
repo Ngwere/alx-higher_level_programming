@@ -8,4 +8,5 @@ def class_to_json(obj):
     Args:
          obj (obj) the object
     """
+
     return vars(obj)
