@@ -1,7 +1,14 @@
 #!/usr/bin/python3
-"""The write_file module with the write_file() function"""
+"""Module contains to_json_string(my_obj) function"""
+
+import json
 
 
-def write_file(filename="", text=""):
-    with open(filename, "w", encoding="UTF-8") as f:
-        return f.write(text)
+def to_json_string(my_obj):
+    """the to_json_string function that return a json object
+
+    Args:
+        my_obj (obj) - the object
+    """
+
+    return json.dumps(my_obj)
