@@ -5,5 +5,5 @@ if (isNaN(parseInt(myArgs[0]))) {
 } else {
   for (let i = 0; i < parseInt(myArgs[0]); i++) {
   console.log('C is fun');
-}
+  }
 }
